@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>Notice Requirements</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Requirement</th>
+        <th>Pin Cites from CCPA Act</th>
+        <th>Pin Cites from CCPA Proposed Regulations</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @notice_requirements.each do |notice_requirement| %>
+        <tr>
+          <td><%= notice_requirement.topic %></td>
+          <td><%= notice_requirement.requirement %></td>
+          <td><%= notice_requirement.act_cites %></td>
+          <td><%= notice_requirement.regulation_cites %></td>
+  <!--        <td><%#= link_to 'Show', notice_requirement %></td>-->
+  <!--        <td><%#= link_to 'Edit', edit_notice_requirement_path(notice_requirement) %></td>-->
+  <!--        <td><%#= link_to 'Destroy', notice_requirement, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+<%= link_to 'New Notice Requirement', new_notice_requirement_path %>

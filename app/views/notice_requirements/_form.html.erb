@@ -1,0 +1,17 @@
+<%= form_with(model: notice_requirement, local: true) do |form| %>
+  <% if notice_requirement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(notice_requirement.errors.count, "error") %> prohibited this notice_requirement from being saved:</h2>
+
+      <ul>
+        <% notice_requirement.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

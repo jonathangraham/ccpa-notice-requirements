@@ -1,0 +1,2 @@
+class NoticeRequirement < ApplicationRecord
+end
