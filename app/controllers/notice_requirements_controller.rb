@@ -4,10 +4,16 @@ class NoticeRequirementsController < ApplicationController
   # GET /notice_requirements
   # GET /notice_requirements.json
   def index
-    topics = NoticeRequirement.all.pluck(:topic).uniq
-    color_classes = ["", "table-primary", "table-secondary", "table-success", "table-danger", "table-warning", "table-info", "table-light"]
-    @row_klass = Hash[topics.zip(color_classes)]
-    @notice_requirements = NoticeRequirement.all
+    topic = params[:topic] || ''
+    act_citation = params[:act_citation] || ''
+    reg_citation = params[:reg_citation] || ''
+    text_search = params[:text_search] || ''
+    @notice_requirements = NoticeRequirement.where('topic LIKE ?', "%#{topic}%")
+                                            .where('act_cites LIKE ?', "%#{act_citation}%")
+                                            .where('regulation_cites LIKE ?', "%#{reg_citation}%")
+                                            .where('requirement LIKE ?', "%#{text_search}%")
+    @act_citations = act_citations
+    @reg_citations = reg_citations
   end
 
   # GET /notice_requirements/1
@@ -64,14 +70,29 @@ class NoticeRequirementsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_notice_requirement
-      @notice_requirement = NoticeRequirement.find(params[:id])
-    end
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_notice_requirement
+    @notice_requirement = NoticeRequirement.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def notice_requirement_params
-      params.fetch(:notice_requirement, {})
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def notice_requirement_params
+    params.fetch(:notice_requirement, {})
+  end
+
+  def act_citations
+    modify_citation_list(NoticeRequirement.all.pluck(:act_cites))
+  end
+
+  def reg_citations
+    modify_citation_list(NoticeRequirement.all.pluck(:regulation_cites))
+  end
+
+  def modify_citation_list(citations)
+    citations.flatten
+             .compact
+             .map { |c| c.split(', ') }
+             .flatten.uniq.sort
+  end
 end

@@ -1,11 +1,11 @@
 .jumbotron {
   color: white;
   //background-image: url("https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d7970.56c");
-  background-image: url("../../assets/images/privacy.jpg");
+  background-image: url("../../assets/images/privacy1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 30vh;
 
   .center {
     width: 30%;
@@ -13,11 +13,60 @@
   }
 
   .title-text {
-    height: 25vh;
+    height: 10vh;
   }
 }
 
 .highlight-text {
   font-weight: 800;
   text-shadow: 0.5px 0 0 #0095CD, -0.5px 0 0 #0095CD, 0 0.5px 0 #0095CD, 0 -0.5px 0 #0095CD, 0.5px 0.5px #0095CD, -1px -1px 0 #0095CD, 0.5px -1px 0 #0095CD, -1px 0.5px 0 #0095CD;
+}
+
+label {
+  display: inline-block;
+  font-size: 12px;
+  color: #757575;
+  text-align: left;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.shadow-hover {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.card-header {
+  background-color: #45a049;
+  color: white;
+}
+
+table {
+  margin-top: 50px;
 }
