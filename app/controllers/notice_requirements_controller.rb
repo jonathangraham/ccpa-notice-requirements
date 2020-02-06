@@ -4,6 +4,9 @@ class NoticeRequirementsController < ApplicationController
   # GET /notice_requirements
   # GET /notice_requirements.json
   def index
+    topics = NoticeRequirement.all.pluck(:topic).uniq
+    color_classes = ["", "table-primary", "table-secondary", "table-success", "table-danger", "table-warning", "table-info", "table-light"]
+    @row_klass = Hash[topics.zip(color_classes)]
     @notice_requirements = NoticeRequirement.all
   end
 

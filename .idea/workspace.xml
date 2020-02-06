@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="008a267d-5c58-48b3-ba53-ff46c1b8f44c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/javascript/stylesheets/notice_requirements.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/notice_requirements_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/notice_requirements_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/notice_requirements/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notice_requirements/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580951268701</updated>
-      <workItem from="1580951270007" duration="2132000" />
+      <workItem from="1580951270007" duration="4986000" />
     </task>
     <task id="LOCAL-00001" summary="basic rails template with bootstrap">
       <created>1580951826177</created>
@@ -155,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580951826177</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add notice_requirement scaffold">
+      <created>1580956280454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580956280454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,12 +173,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basic rails template with bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic rails template with bootstrap" />
+    <MESSAGE value="add notice_requirement scaffold" />
+    <option name="LAST_COMMIT_MESSAGE" value="add notice_requirement scaffold" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="434" y="108" key="CommitChangelistDialog2" timestamp="1580951826001">
-      <screen x="0" y="23" width="1680" height="973" />
+    <state x="434" y="108" key="CommitChangelistDialog2" timestamp="1580961824074">
+      <screen x="0" y="23" width="1680" height="975" />
     </state>
     <state x="434" y="108" key="CommitChangelistDialog2/0.23.1680.973@0.23.1680.973" timestamp="1580951826001" />
+    <state x="434" y="108" key="CommitChangelistDialog2/0.23.1680.975@0.23.1680.975" timestamp="1580961824074" />
+    <state x="440" y="243" key="Vcs.Push.Dialog.v2" timestamp="1580956282937">
+      <screen x="0" y="23" width="1680" height="975" />
+    </state>
+    <state x="440" y="243" key="Vcs.Push.Dialog.v2/0.23.1680.975@0.23.1680.975" timestamp="1580956282937" />
   </component>
 </project>

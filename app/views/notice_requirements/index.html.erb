@@ -1,12 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row title-text">
+      <div class="col-sm-12 align-self-end">
+        <h1 class="display-4 highlight-text">CCPA NOTICE REQUIREMENTS</h1>
+        <h3 class="display-6 highlight-text">Your simple guide to selecting the requirements you need.</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <h1>Notice Requirements</h1>
 
-  <table>
-    <thead>
+  <table class="table table-hover">
+    <thead class="thead-dark">
       <tr>
-        <th>Topic</th>
+<!--        <th>Topic</th>-->
         <th>Requirement</th>
         <th>Pin Cites from CCPA Act</th>
         <th>Pin Cites from CCPA Proposed Regulations</th>
@@ -15,9 +26,16 @@
     </thead>
 
     <tbody>
+      <% current_topic = '' %>
       <% @notice_requirements.each do |notice_requirement| %>
+        <% if notice_requirement.topic != current_topic %>
+          <% current_topic = notice_requirement.topic %>
+          <tr class="table-dark">
+            <td colspan="7"><%= notice_requirement.topic.upcase %></td>
+          </tr>
+        <% end %>
         <tr>
-          <td><%= notice_requirement.topic %></td>
+<!--          <td><%#= notice_requirement.topic %></td>-->
           <td><%= notice_requirement.requirement %></td>
           <td><%= notice_requirement.act_cites %></td>
           <td><%= notice_requirement.regulation_cites %></td>
